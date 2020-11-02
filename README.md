@@ -1,6 +1,6 @@
 # Las-tools
 
-This is a personal project. The site is some web based tools to extend a user's experience with Last.fm and Spotify. There is features for porting a user's top songs from Last.fm to Spotify and creating a collage from a user's top albums on Last.fm. Some of the code I wrote in this project was ported to my other repo [go-rainbow-collage](https://github.com/conorbros/go-rainbow-collage). I started this project with the goal is being faster and more reliable than other websites offering this functionality and I managed to achieve that. My application can generate bigger collages in under a quarter of the time that other sites take to do this.
+This is a personal project. The application is some web based tools to extend a user's experience with Last.fm and Spotify. There is features for porting a user's top songs from Last.fm to Spotify and creating a collage from a user's top albums on Last.fm. Some of the code I wrote in this project was ported to my other repo [go-rainbow-collage](https://github.com/conorbros/go-rainbow-collage). I started this project with the goal of being faster and more reliable than other websites offering this functionality and I managed to achieve that. My application can generate bigger collages in under a quarter of the time that other sites take to do this.
 
 ## Running the project
 
