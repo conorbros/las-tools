@@ -1,4 +1,4 @@
-module github.com/conorbros/conorb-dev
+module github.com/conorbros/las-tools
 
 go 1.14
 

@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/conorbros/conorb-dev/conf"
-	"github.com/conorbros/conorb-dev/middleware"
-	"github.com/conorbros/conorb-dev/spotify"
+	"github.com/conorbros/las-tools/conf"
+	"github.com/conorbros/las-tools/middleware"
+	"github.com/conorbros/las-tools/spotify"
 )
 
 type portPlaylistData struct {

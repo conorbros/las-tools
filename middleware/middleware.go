@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/conorbros/conorb-dev/spotify"
-	"github.com/conorbros/conorb-dev/util"
+	"github.com/conorbros/las-tools/spotify"
+	"github.com/conorbros/las-tools/util"
 )
 
 const (

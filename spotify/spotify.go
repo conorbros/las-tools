@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/conorbros/conorb-dev/conf"
-	"github.com/conorbros/conorb-dev/util"
+	"github.com/conorbros/las-tools/conf"
+	"github.com/conorbros/las-tools/util"
 )
 
 // AuthDetails contains the auth details extracted from a request to the server from a logged in user

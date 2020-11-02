@@ -4,10 +4,10 @@ FROM golang:latest
 RUN go get github.com/tools/godep
 
 # Add application code
-ADD . /go/src/github.com/conorbros/conorb-dev
+ADD . /go/src/github.com/conorbros/las-tools
 
 # Set working dir to app code dir
-WORKDIR /go/src/github.com/conorbros/conorb-dev
+WORKDIR /go/src/github.com/conorbros/las-tools
 
 # Download dependencies and build the application
 RUN go mod download
@@ -19,4 +19,4 @@ ENV PORT 80
 ENV SPOTIFY_REDIRECT_URL "https://conorb.dev/playlist"
 
 # Run the application
-CMD ["./conorb-dev"]
+CMD ["./las-tools"]

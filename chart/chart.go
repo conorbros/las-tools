@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/conorbros/conorb-dev/conf"
+	"github.com/conorbros/las-tools/conf"
 	gim "github.com/ozankasikci/go-image-merge"
 )
 

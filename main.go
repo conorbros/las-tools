@@ -6,12 +6,12 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/conorbros/conorb-dev/conf"
+	"github.com/conorbros/las-tools/conf"
 
-	"github.com/conorbros/conorb-dev/chart"
-	"github.com/conorbros/conorb-dev/middleware"
-	"github.com/conorbros/conorb-dev/playlist"
-	"github.com/conorbros/conorb-dev/spotify"
+	"github.com/conorbros/las-tools/chart"
+	"github.com/conorbros/las-tools/middleware"
+	"github.com/conorbros/las-tools/playlist"
+	"github.com/conorbros/las-tools/spotify"
 )
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
