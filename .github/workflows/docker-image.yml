@@ -1,0 +1,34 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DH_USER: ${{ secrets.DOCKERHUB_USER }}
+      DH_PASS: ${{ secrets.DOCKERHUB_PASSWORD }}
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+      SSH_KEY_PATH: ${{ github.workspace }}/../private.key
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_PRIVATE_KEY" > ../private.key
+          sudo chmod 600 ../private.key
+          echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          docker build . --file Dockerfile --tag conorbros/conor-space:latest
+          echo "$DH_PASS" | docker login -u "$DH_USER" --password-stdin
+          docker push conorbros/conor-space:latest
+          ssh -i $SSH_KEY_PATH conor@35.189.4.250 << EOF
+            sudo docker pull conorbros/conor-space:latest
+            sudo docker ps -q --filter "name=conorbdev-running" | grep -q . && sudo docker stop conorbdev-running && sudo docker rm -fv conorbdev-running
+            sudo docker run -p 80:80 -d --name conorbdev-running conorbros/conor-space:latest
+          EOF

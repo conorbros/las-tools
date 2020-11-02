@@ -1,0 +1,1 @@
+gcloud beta compute ssh --zone "australia-southeast1-b" "instance-1" --project "conor-space"

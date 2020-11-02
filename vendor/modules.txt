@@ -1,0 +1,11 @@
+# github.com/lucasb-eyer/go-colorful v1.0.3
+## explicit
+# github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
+## explicit
+# github.com/oliamb/cutter v0.2.2
+## explicit
+# github.com/ozankasikci/go-image-merge v0.2.3-0.20200725062803-aedf4eb2eb2c
+## explicit
+github.com/ozankasikci/go-image-merge
+# github.com/rainycape/magick v0.0.0-20160302153252-3156ecd81fb6
+## explicit

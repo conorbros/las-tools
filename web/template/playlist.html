@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lastools</title>
+
+    <!-- CSS  -->
+    <link rel="icon" href="/static/assets/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="/static/css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="/static/css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+  </head>
+  <body>
+    <nav class="black" role="navigation">
+      <div class="nav-wrapper container black">
+        <a id="logo-container" href="/" class="brand-logo">
+          <i class="material-icons red-text-alt">build</i></a
+        >
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+      </div>
+    </nav>
+
+    <div class="container">
+      <div
+        class="section no-pad-bot"
+        id="port-selection-div"
+        style="display: none"
+      >
+        <div class="container center">
+          <br /><br />
+          <h1 class="header center red-text-alt text-lighten-2">
+            Port Last.fm tracks to a Spotify Playlist
+          </h1>
+
+          <div class="row center">
+            <div class="input-field col offset-s4 s4">
+              <input id="username-textbox" type="text" class="validate" />
+              <label for="username-textbox">Last.fm username</label>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="input-field col offset-s4 s4">
+              <select id="song-number-select">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+              <label>Songs to include</label>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="input-field col offset-s4 s4">
+              <select id="time-period-select">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="7day">1 Week</option>
+                <option value="1month">1 Month</option>
+                <option value="3month">3 Months</option>
+                <option value="6month">6 Months</option>
+                <option value="12month">12 Months</option>
+                <option value="overall">All time</option>
+              </select>
+              <label>Time period</label>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div>
+              <a
+                href="#"
+                id="port-button"
+                class="btn-large waves-effect waves-light red-alt lighten-1"
+                >Port</a
+              >
+            </div>
+          </div>
+          <br /><br />
+        </div>
+      </div>
+      <div
+        class="section no-pad-bot"
+        id="port-finished-div"
+        style="display: none"
+      >
+        <div class="container center">
+          <br /><br />
+          <h1 class="header center red-text-alt text-lighten-2">
+            Your new Spotify Playlist has been created successfully
+          </h1>
+
+          <div class="row center"></div>
+        </div>
+      </div>
+
+      <div
+        class="section no-pad-bot"
+        id="spotify-login-div"
+        style="display: none"
+      >
+        <div class="container center">
+          <br /><br />
+          <h1 class="header center red-text-alt text-lighten-2">
+            Login with Spotify
+          </h1>
+          <br />
+          <div class="row center" style="margin-top: 35px">
+            <div>
+              <a
+                href="/login"
+                id="login-button"
+                class="btn-large waves-effect waves-light red-alt lighten-1"
+                >Login</a
+              >
+            </div>
+          </div>
+          <br /><br />
+        </div>
+      </div>
+
+      <div
+        class="section no-pad-bot"
+        id="port-loading-div"
+        style="margin-top: 350px; display: none"
+      >
+        <div class="container center">
+          <div class="preloader-wrapper active" id="loader">
+            <div class="spinner-layer spinner-red-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer black hide-on-med-and-down">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Site</h5>
+            <p class="grey-text text-lighten-1">Built with Materialize</p>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li>
+                <a
+                  class="grey-text text-lighten-1"
+                  href="https://www.spotify.com"
+                  >Spotify</a
+                >
+              </li>
+              <li>
+                <a class="grey-text text-lighten-1" href="https://www.last.fm/"
+                  >Last.fm</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect</h5>
+            <ul>
+              <li>
+                <a
+                  class="grey-text text-lighten-1"
+                  href="https://github.com/conorbros"
+                  >Github</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/static/js/materialize.js"></script>
+    <script type="module" src="/static/js/init.js"></script>
+    <script type="module" src="/static/js/playlist.js"></script>
+  </body>
+</html>
